@@ -10,12 +10,7 @@
 ***REMOVED***
 ***REMOVED***
 
-
 ***REMOVED***
-from dotenv import load_dotenv
-import os
-load_dotenv()
-
 
 ***REMOVED***
 ***REMOVED***
@@ -25,15 +20,18 @@ load_dotenv()
 ***REMOVED***
 
 ***REMOVED***
-SECRET_KEY = os.getenv("DJANGO_KEY")
-***REMOVED***
 ***REMOVED***
 
 ***REMOVED***
+***REMOVED***
+
+***REMOVED***
 
 
 ***REMOVED***
 
+***REMOVED***
+***REMOVED***
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
@@ -125,3 +123,4 @@ SECRET_KEY = os.getenv("DJANGO_KEY")
 # ***REMOVED***#default-auto-field
 
 ***REMOVED***
+
