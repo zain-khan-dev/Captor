@@ -17,14 +17,14 @@ def parseAudioFile(file):
 
     process = subprocess.Popen(['ffmpeg', '-loglevel', 'quiet', '-i',
                                 file.temporary_file_path(),
-                                '-ar', str(sample_rate) , '-ac', '1', '-f', 's16le', '-'***REMOVED***,
+                                '-ar', str(sample_rate) , '-ac', '1', '-f', 's16le', '-'],
                                 stdout=subprocess.PIPE)
 
 
     rec.SetWords(True)
     rec.SetPartialWords(True)
 
-    result = [***REMOVED***
+    result = []
     while True:
 
         data = process.stdout.read(4000)
@@ -38,14 +38,12 @@ def parseAudioFile(file):
         else:
             rec.PartialResult()
 
-    parsedTimeStampWords = [***REMOVED***
+    parsedTimeStampWords = []
 
     for data in result:
-        sentence = json.loads(data)["result"***REMOVED***
+        sentence = json.loads(data)["result"]
         for words in sentence:
-            parsedTimeStampWords.append(dict(start_ts = float(round(words["start"***REMOVED***,2)), end_ts = float(round(words["end"***REMOVED***,2)), word = words["word"***REMOVED***))
+            parsedTimeStampWords.append(dict(start_ts = float(round(words["start"],2)), end_ts = float(round(words["end"],2)), word = words["word"]))
 
 
     return parsedTimeStampWords
-
-

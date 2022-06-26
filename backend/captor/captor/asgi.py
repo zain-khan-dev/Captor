@@ -1,11 +1,9 @@
-***REMOVED***
+"""
 ASGI config for captor project.
-
 It exposes the ASGI callable as a module-level variable named ``application``.
-
-***REMOVED***
+For more information on this file, see
 https://docs.djangoproject.com/en/4.0/howto/deployment/asgi/
-***REMOVED***
+"""
 
 import os
 

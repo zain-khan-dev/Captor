@@ -16,8 +16,8 @@ class get_audio_subtitles(APIView):
 
 
     def post(self, request):
-        print(request.FILES['audio_file'***REMOVED***)
-        audio_file = request.FILES['audio_file'***REMOVED***
+        print(request.FILES['audio_file'])
+        audio_file = request.FILES['audio_file']
         parsedData = parseAudioFile(audio_file)
         audioResponse = AudioResponse(data=parsedData, many=True)
         # parseTranslation(request.F)
